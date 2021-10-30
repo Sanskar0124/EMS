@@ -7,7 +7,7 @@ from django.urls import reverse
 
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = ("name", "salary", "workingLoc", "mobile1", "account_actions")
-    approveLink = "admin/"
+    approveLink = "accounts/approve/"
     rejectLink = "admin/"
     def account_actions(self, obj):
             return format_html(
