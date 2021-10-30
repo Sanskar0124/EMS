@@ -4,11 +4,10 @@ from django.utils.html import format_html
 from django.urls import reverse
 
 # Register your models here.
-
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = ("firstName", "lastName", "salary", "workingLoc", "mobile1", "account_actions")
-    approveLink = "accounts/approve/"
-    rejectLink = "admin/"
+    approveLink = "accounts/approve/{{}}"
+    rejectLink = "accounts/reject/"
     def account_actions(self, obj):
             return format_html(
                 '<button><a class="button" href="{}">Approve</a></button>&nbsp;'

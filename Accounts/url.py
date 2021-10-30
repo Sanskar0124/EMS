@@ -5,6 +5,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('approve/', views.approveEmp, name="approveEmp"),
-    path('reject/', views.rejectEmp, name="rejectEmp  "),
+    path('approve/<str:email>', views.approveEmp, name="approveEmp"),
+    path('reject/', views.rejectEmp, name="rejectEmp"),
 ]
