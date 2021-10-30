@@ -6,7 +6,7 @@ from django.urls import reverse
 # Register your models here.
 
 class EmployeeAdmin(admin.ModelAdmin):
-    list_display = ("firstName", "salary", "workingLoc", "mobile1", "account_actions")
+    list_display = ("firstName", "lastName", "salary", "workingLoc", "mobile1", "account_actions")
     approveLink = "accounts/approve/"
     rejectLink = "admin/"
     def account_actions(self, obj):
