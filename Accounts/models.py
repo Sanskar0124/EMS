@@ -35,7 +35,7 @@ class Employee(models.Model):
     image_tag.allow_tags = True
     def save(self, *args, **kwargs):
         subject = 'EtecCube Interns'
-        message = 'Hey login in with this credintials/n profEmail: '+self.name+"@etchcube.com/n password: India@123"
+        message = 'Hey login in with this credintials/n profEmail: '+self.firstName+"@etchcube.com/n password: India@123"
         to = [self.email]
         send_mail(subject, message, settings.EMAIL_HOST_USER, to)
         super(Employee, self).save(*args, **kwargs)
